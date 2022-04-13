@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// import { Drawer } from "./components";
+import "./App.css";
+// import CreateClass from "./components/CreateClass/CreateClass";
+import Header from "./components/Header/Header";
+import Form from "./components/CreateClass/Form";
+import Begin from "./components/Begin/Begin";
+import JoinClass from "./components/JoinClass/JoinClass";
+// import PracticaTwo from "./components/Practice/PracticaTwo";
+// import Practice from "./components/Practice/Practice";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Drawer /> */}
+      {/* <Practice /> */}
+      {/* <PracticaTwo /> */}
+      <Header />
+      <Begin />
+      <JoinClass />
+      {/* <CreateClass /> */}
+      <Form />
     </div>
   );
 }

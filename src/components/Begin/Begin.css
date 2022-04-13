@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.begin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.container__img {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7.5rem;
+}
+
+.begin__text {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.agrega__clase p {
+  display: flex;
+
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 200;
+  line-height: 1.25rem;
+  text-align: center;
+  flex-shrink: 1;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  width: 430px;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.add__class {
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.01785714em;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #3c4043;
+}
+.form__textfield {
+  display: flex;
+  justify-content: space-between;
+}
+.MuiFormLabel-root {
+}
+
+/* #standard-basic-label {
+  display: flex;
+  width: 100%;
+} */
+/* #standard-basic {
+  color: #1a73e8;
+} */
+.class1 {
+  color: #1a73e8;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+  line-height: 36px;
+}
+
+.class2 {
+  background-color: #1a73e8;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+  line-height: 36px;
+}
+
+.mainbtn {
+  background-color: #1a73e8;
+  color: #fff;
+}
+/* color: rgba(0,0,0,0.87);
+font-family: 'Roboto',Helvetica,Arial,sans-serif;
+font-size: 0.8125rem;
+font-weight: 400;
+line-height: 1.25rem;
+text-align: center;
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+flex-shrink: 1;
+height: 23.75rem;
+margin-bottom: 1.875rem;
+max-height: 15rem;
+width: 90%;
+margin-top: 7.5rem;
+background-image: url("https://www.gstatic.com/classroom/empty_states_home.svg"); */
