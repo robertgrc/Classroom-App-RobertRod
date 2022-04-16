@@ -1,9 +1,16 @@
-import { Avatar, Button, TextField } from "@material-ui/core";
+import { Avatar, Button, Link, TextField } from "@material-ui/core";
 import { Close } from "@mui/icons-material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./JoinClass.css";
 
 const JoinClass = () => {
+  let navigate = useNavigate();
+  const handleLogout = () => {
+    console.log("logout");
+    navigate("/");
+  };
+
   return (
     <div>
       <div className="joinClass">
@@ -30,7 +37,7 @@ const JoinClass = () => {
                 <div className="joinClass__loginEmail"></div>
               </div>
             </div>
-            <Button variant="outlined" color="primary">
+            <Button variant="outlined" color="primary" onClick={handleLogout}>
               Logout
             </Button>
           </div>
