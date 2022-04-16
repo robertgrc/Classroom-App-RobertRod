@@ -51,7 +51,8 @@ const Begin = () => {
 
 export default Begin;
 
-<h2 class="tLDEHd">
+{
+  /* <h2 class="tLDEHd">
   <p class="asQXV">Agrega una clase para empezar</p>
   <div
     jsaction="rcuQ6b:npT2md;JIbuQc:Ckgp2b(Qx7uuf),dr4lkd(vAJl2)"
@@ -88,4 +89,5 @@ export default Begin;
       </span>
     </div>
   </div>
-</h2>;
+</h2>; */
+}
