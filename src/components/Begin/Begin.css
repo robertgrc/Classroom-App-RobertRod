@@ -75,13 +75,6 @@ form {
 .MuiFormLabel-root {
 }
 
-/* #standard-basic-label {
-  display: flex;
-  width: 100%;
-} */
-/* #standard-basic {
-  color: #1a73e8;
-} */
 .class1 {
   color: #1a73e8;
   border-radius: 5px;
@@ -109,19 +102,3 @@ form {
   background-color: #1a73e8;
   color: #fff;
 }
-/* color: rgba(0,0,0,0.87);
-font-family: 'Roboto',Helvetica,Arial,sans-serif;
-font-size: 0.8125rem;
-font-weight: 400;
-line-height: 1.25rem;
-text-align: center;
-background-position: center center;
-background-repeat: no-repeat;
-background-size: contain;
-flex-shrink: 1;
-height: 23.75rem;
-margin-bottom: 1.875rem;
-max-height: 15rem;
-width: 90%;
-margin-top: 7.5rem;
-background-image: url("https://www.gstatic.com/classroom/empty_states_home.svg"); */
