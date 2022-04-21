@@ -5,8 +5,8 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import ClassManager from "./components/ClassManager/ClassManager";
 import Login from "./components/Login/Login";
-import Formulario from "./components/Formulario/Formulario";
 import Register from "./components/Register/Register";
+import FormContact from "./components/FormContact/FormContact";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <Route path="/begin" element={<Begin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/formcontact" element={<FormContact />} />
       </Routes>
     </div>
   );

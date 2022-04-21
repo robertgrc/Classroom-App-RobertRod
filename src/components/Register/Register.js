@@ -11,9 +11,23 @@ import {
   Typography,
 } from "@material-ui/core";
 import { CardContent } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
+
+// const [nombre, setNombre] = useState({ campo: "", valido: null });
+// const [email, setEmail] = useState({ campo: "", valido: null });
+// const [password, setPassword] = useState({ campo: "", valido: null });
+// const [telefono, setTelefono] = useState({ campo: "", valido: null });
+// const [sexo, setSexo] = useState({ campo: "", valido: null });
+
+const expresiones = {
+  usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+  nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+  password: /^.{4,12}$/, // 4 a 12 digitos.
+  correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+  telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+};
 
 const Register = () => {
   let navigate = useNavigate();
@@ -31,11 +45,14 @@ const Register = () => {
           <Grid container spacing={1}>
             <Grid xs={12}>
               <TextField
+                type="text"
                 label="Nombre"
                 placeholder="Ingresa tu Nombre"
                 variant="filled"
                 fullWidth
                 required
+                expresionRegular={expresiones.nombre}
+                leyendaError="El nombre solo puede contener letras, acentos y espacios"
               />
             </Grid>
             <Grid xs={12}>
@@ -85,7 +102,7 @@ const Register = () => {
                 fullWidth
                 required
               />
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary" type="submit">
                 Enviar
               </Button>
               <Button variant="text" onClick={handleCancel}>
