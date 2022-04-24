@@ -15,7 +15,10 @@ export const useForm = (initialForm, validateForm) => {
     });
   };
 
-  const handleBlur = (e) => {};
+  const handleBlur = (e) => {
+    handleChange(e);
+    setErrors(validateForm(form));
+  };
 
   const handleSubmit = (e) => {};
 

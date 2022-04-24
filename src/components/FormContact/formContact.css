@@ -5,13 +5,12 @@
   align-items: center;
 }
 
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-  font-family: sans-serif;
+.error {
+  font-weight: bold;
+  color: #dc3545;
 }
 
-*,
+/* *,
 *:after,
 *::before {
   box-sizing: inherit;
@@ -105,4 +104,4 @@ td {
   text-align: left;
   padding: 0.5rem;
   border-bottom: thin solid #dedede;
-}
+} */
