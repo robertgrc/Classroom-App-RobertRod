@@ -15,12 +15,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
-// const [nombre, setNombre] = useState({ campo: "", valido: null });
-// const [email, setEmail] = useState({ campo: "", valido: null });
-// const [password, setPassword] = useState({ campo: "", valido: null });
-// const [telefono, setTelefono] = useState({ campo: "", valido: null });
-// const [sexo, setSexo] = useState({ campo: "", valido: null });
-
 const expresiones = {
   usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
   nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.

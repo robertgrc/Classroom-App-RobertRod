@@ -9,7 +9,7 @@ const ClassManager = () => {
   };
 
   const handleRegister = () => {
-    navigate("/register");
+    navigate("/formcontact");
   };
   // let navigate = useNavigate();
   // const handleLogout = () => {

@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
+import { AuthContext } from "../auth/authContext";
 import "./formContact.css";
 
 const initialForm = {
@@ -9,14 +11,6 @@ const initialForm = {
   password: "",
   phone: "",
 };
-
-// const expresiones = {
-//   usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-//   name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-//   password: /^.{4,12}$/, // 4 a 12 digitos.
-//   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-//   telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-// };
 
 const validationsForm = (form) => {
   let errors = {};
@@ -63,6 +57,16 @@ const validationsForm = (form) => {
 };
 
 const FormContact = () => {
+  const { user } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const handleCancel = () => {
+    navigate("/", {
+      replace: true,
+    });
+  };
+
   const {
     form,
     errors,
@@ -75,7 +79,7 @@ const FormContact = () => {
 
   return (
     <div className="container__form">
-      <h1>Registrar Usuario</h1>
+      <h1>Registrar Usuario--{user.name}</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -141,7 +145,7 @@ const FormContact = () => {
         <button type="submit" value="Enviar">
           Enviar
         </button>
-        <button>Cancelar</button>
+        <button onClick={handleCancel}>Cancelar</button>
       </form>
     </div>
   );

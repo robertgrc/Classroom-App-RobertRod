@@ -5,7 +5,7 @@ import React from "react";
 import { useStyles } from "./style";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const Header = ({ children }) => {
+const Header = ({}) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const handleClick = (event) => setAnchorEl(event.currentTarget);
@@ -16,7 +16,7 @@ const Header = ({ children }) => {
         <Toolbar className={classes.toolbar}>
           <div className={classes.headerWrapper}>
             <MenuIcon className={classes.appBar} />
-            {children}
+            {/* {children} */}
             <img
               src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
               alt="Classroom"
