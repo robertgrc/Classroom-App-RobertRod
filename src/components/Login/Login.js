@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../../hooks/useForm";
+import { AuthContext } from "../auth/authContext";
+import { types } from "../types/types";
 import "./Login.css";
 
 const initialForm = {
@@ -41,9 +43,22 @@ const Login = () => {
   } = useForm(initialForm, validationsForm);
 
   let navigate = useNavigate();
-  const handleCancel = () => {
-    navigate("/");
+  const { dispatch } = useContext(AuthContext);
+
+  const handleLogin = () => {
+    const action = {
+      type: types.login,
+      payload: { name: "camilita" },
+    };
+    dispatch(action);
+    navigate("/begin", { replace: true });
+    console.log("loginsubmit");
   };
+
+  const handleCancel = () => {
+    navigate("/", { replace: true });
+  };
+
   return (
     <div className="home">
       <h1 className="form__title"> Login de Usuario </h1>
@@ -93,7 +108,12 @@ const Login = () => {
               </div>
             </div>
           </div>
-          <button type="button" disabled="" className="home__login">
+          <button
+            type="button"
+            disabled=""
+            className="home__login"
+            onClick={handleLogin}
+          >
             Ingresar
           </button>
           <p className="form__action" onClick={handleCancel}>
